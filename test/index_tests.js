@@ -31,8 +31,10 @@ describe('CRUD taco test', function () {
         expect(response.body).to.be.an('array')
 
         if (response.body.length) {
-          expect(response.body[0].to.have.property('calories'))
+          expect(response.body[0]).to.have.property('amount')
         }
+
+        // assert.strictEqual(200, response.status)
         done()
       })
     })
